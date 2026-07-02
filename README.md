@@ -9,8 +9,9 @@ Web Technologies (TP17) set. Runtime pinned to the competition spec.
 docker compose up --build
 ```
 
-Then open **http://localhost:4200**. This starts the app's dev server inside Docker — no local
-toolchain required.
+Then open **http://localhost:4200**. The Docker image builds a **production bundle** (`ng build`)
+and serves it with nginx on port 80 (mapped to 4200 locally) — no dev-server host checks, so it
+works behind any cloud ingress host.
 
 Stop it with `docker compose down`.
 
