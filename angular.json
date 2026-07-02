@@ -62,7 +62,12 @@
               "buildTarget": "app:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development",
+          "options": {
+            "allowedHosts": [
+              ".skill17.com"
+            ]
+          }
         },
         "test": {
           "builder": "@angular/build:unit-test"
