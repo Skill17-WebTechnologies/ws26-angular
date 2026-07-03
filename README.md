@@ -9,9 +9,9 @@ Web Technologies (TP17) set. Runtime pinned to the competition spec.
 docker compose up --build
 ```
 
-Then open **http://localhost:4200**. The Docker image builds a **production bundle** (`ng build`)
-and serves it with nginx on port 80 (mapped to 4200 locally) — no dev-server host checks, so it
-works behind any cloud ingress host.
+Then open **http://localhost**. This runs the Angular dev server (`ng serve`) inside Docker on
+port 80. The WSC2026 ingress hosts (`*.skill17.com`) are allowed via `allowedHosts` in
+`angular.json`, so it also works behind the cloud ingress.
 
 Stop it with `docker compose down`.
 
@@ -24,7 +24,7 @@ npm install
 npm start
 ```
 
-The dev server runs on **http://localhost:4200** and reloads on save.
+The dev server runs on **http://localhost** and reloads on save.
 Edit **src/app/app.html and src/app/app.ts** to change the app.
 
 ## Stack
